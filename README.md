@@ -1,4 +1,4 @@
-# FEEDBACK API
+# Nowted API
 
 This is a note application API service with the following features:
 
