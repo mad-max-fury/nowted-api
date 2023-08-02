@@ -34,10 +34,7 @@ app.use(
   })
 );
 // enable cors for specific route
-const allowedOrigins = [
-  "http://localhost:3000",
-  "https://notelyfrontend-mad-max-fury.vercel.app/",
-];
+const allowedOrigins = ["https://notelyfrontend-mad-max-fury.vercel.app/"];
 app.use(
   cors({
     origin: allowedOrigins,
