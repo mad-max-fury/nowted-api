@@ -34,7 +34,7 @@ app.use(
   })
 );
 // enable cors for specific route
-const allowedOrigins = ["https://notelyfrontend-mad-max-fury.vercel.app"];
+const allowedOrigins = ["https://nowted-one.vercel.app/"];
 app.use(
   cors({
     origin: allowedOrigins,
