@@ -112,7 +112,7 @@ userAuth.forgotPassword = catchAsync(async (req, res, next) => {
   user.resetTokenExpires = Date.now() + 10 * 60 * 1000;
   await user.save({ validateBeforeSave: false });
   // Send the token to the user's email address
-  const resetUrl = `${req.protocol}://https://nowted-api.onrender.com/create-password/${resetToken}`;
+  const resetUrl = `${req.protocol}://nowted-one.vercel.app/create-password/${resetToken}`;
   try {
     await new Email(user, resetUrl).sendResetPasswordInstructions();
     //send response back to the user
