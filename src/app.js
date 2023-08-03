@@ -34,21 +34,13 @@ app.use(
   })
 );
 // enable cors for specific route
-const allowedOrigins = ["https://notelyfrontend-mad-max-fury.vercel.app/"];
+const allowedOrigins = ["https://notelyfrontend-mad-max-fury.vercel.app"];
 app.use(
   cors({
     origin: allowedOrigins,
     credentials: true,
   })
 );
-app.use((req, res, next) => {
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin))
-    res.setHeader("Access-Control-Allow-Origin", origin);
-  res.header("Access-Control-Allow-Headers", true);
-  res.header("Access-Control-Allow-Credentials", true);
-  next();
-});
 
 // enable morgan
 app.use(morgan("dev"));
